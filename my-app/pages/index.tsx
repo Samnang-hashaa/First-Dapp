@@ -60,6 +60,7 @@ export default function Home() {
       setLoading(false);
       // get the updated number of addresses in the whitelist
       await getNumberOfWhitelisted();
+      setJoinWhitelist(true);
     }
     catch (err){
       console.error(err);
@@ -194,6 +195,7 @@ export default function Home() {
           {numberOfWhitelisted} have already joined the Whitelist
         </div>
         {renderButton()}
+        
       </div>
       <div>
         <img className={styles.image} src="./crypto-devs.svg" />
